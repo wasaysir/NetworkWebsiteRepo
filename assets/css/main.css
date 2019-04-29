@@ -155,6 +155,12 @@ li a:hover:not(.active) {
   height: 150px;
 }
 
+#instructables {
+    float: right;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+
 /* Add Animation */
 .modal-content, #caption {  
   -webkit-animation-name: zoom;
