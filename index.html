@@ -1,29 +1,107 @@
-<!DOCTYPE HTML>
-<HTML>
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes -->
+<!--DOCTYPE HTML-->
+<html>
     <head>
-        <title>Home Network</title>
-        <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-    </head>
-    <body>
-        <div>
-            <center>
-            <h1><u>Introduction</u></h1>
-            <h3>This website will list the parts required, installation steps and provide a diagram for the system.</h3></center>
-        </div>
-        <div>
-            <img id="topo" src="assets/Pics/topology.png" width=1173px usemap="#networkmap">
+        <!--<script type="text/javascript" src="canvas.js"></script>-->
+        <script type="text/javascript" src="canvas.js"></script>
+        <!--<script>
+            var doretHealth;
+            doretHealth = 0;
+            var level;
+            level = 0;
             
-            <map name="networkmap">
-              <area shape="circle" coords="720,680,70" alt="Installation" href="installation.html">
-              <area shape="circle" coords="170,140,70" alt="Schematic" href="schematic.html">
-              <area shape="circle" coords="1000,680,70" alt="Parts List" href="partslist.html">
-            </map>
-        </div>
-        
-        
+            function addDoret(){
+                var e = document.getElementById("menuItems");
+                var value = parseInt(e.options[e.selectedIndex].value, 10);
+                doretHealth += value;
+                alert(doretHealth);
+                level+=1;
+                alert(level);
+            }
+            
+            function draw() {
+                var canvas = document.getElementById('canvas');
+                if (canvas.getContext) {
+                    var ctx = canvas.getContext('2d');
+                    if (doretHealth/level < 2){
+                        //Extreme Sadness
+                        ctx.beginPath();
+                        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                        ctx.moveTo(110, 105);
+                        ctx.arc(75, 105, 35, 0, Math.PI, true);  // Mouth (clockwise)
+                        ctx.lineTo(110,105);
+                        ctx.moveTo(65, 65);
+                        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                        ctx.moveTo(95, 65);
+                        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                        ctx.stroke();
+                    } else if (doretHealth/level < 3){
+                        //Sadness
+                        ctx.beginPath();
+                        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                        ctx.moveTo(110, 105);
+                        ctx.arc(75, 105, 35, 0, Math.PI, true);  // Mouth (clockwise)
+                        ctx.moveTo(65, 65);
+                        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                        ctx.moveTo(95, 65); 
+                        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                        ctx.stroke();
+                    } else if (doretHealth/level < 3.5){
+                        //APATHY
+                        ctx.beginPath();
+                        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                        ctx.moveTo(95, 100);
+                        ctx.lineTo(55, 100);  // Mouth (clockwise)
+                        ctx.moveTo(65, 65);
+                        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                        ctx.moveTo(95, 65);
+                        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                        ctx.stroke();
+                    } else if (doretHealth/level < 4){
+                        //SMILE
+                        ctx.beginPath();
+                        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                        ctx.moveTo(110, 75);
+                        ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+                        ctx.moveTo(65, 65);
+                        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                        ctx.moveTo(95, 65);
+                        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                        ctx.stroke();
+                    } else {
+                        //SUPER SMILE
+                        ctx.beginPath();
+                        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                        ctx.moveTo(110, 75);
+                        ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+                        ctx.lineTo(110,75);
+                        ctx.moveTo(65, 65);
+                        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+                        ctx.moveTo(95, 65);
+                        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+                        ctx.stroke();
+                    }   
+              }
+            }
+
+        </script>-->
+    </head>
+    <body onload="Javascript:draw();">
+        <h1 id="Prompt">Pick how much health you want to start off with (PSSST... HIGHER IS BETTER! PICK 4!)</h1>
+        <canvas id="canvas" width="150" height="150"></canvas>
+        <form onsubmit="Javascript:addDoret();">
+            <select id="menuItems">
+                <option id="option1" value="1">1</option>
+                <option id="option2" value="2">2</option>
+                <option id="option3" value="3">3</option>
+                <option id="option4" value="4">4</option>
+            </select>
+            <button type="button" onclick="Javascript:addDoret();" class="1" title="3">Carbohydrates</button>
+        </form>
     </body>
-</HTML>
+</html>
+
+<!-- Purgatory 
+                 onload="draw();"
+                <option disabled selected value> -- select an option -- </option>
+-->
