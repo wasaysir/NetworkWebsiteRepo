@@ -5,16 +5,15 @@ level = 1;
 var e = document.getElementById("menuItems");
 
 function addDoret(){
-    alert(doretHealth + " doretHealth");
     var e = document.getElementById("menuItems");
     var value = parseInt(e.options[e.selectedIndex].value);
-    alert(value + " value");
+    alert("Value of your choice: " + value);
     doretHealth += value;
-    alert(doretHealth + " doretHealth");
     level++;
-    alert(level + " level");
+    alert("Starting level " + level);
     changeLevel();
     draw();
+    alert("Raybould's Health: " + doretHealth);
 }
 
 function changeLevel(){

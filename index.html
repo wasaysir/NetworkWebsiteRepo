@@ -4,6 +4,7 @@
     <head>
         <!--<script type="text/javascript" src="canvas.js"></script>-->
         <script type="text/javascript" src="canvas.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="screen" /> 
         <!--<script>
             var doretHealth;
             doretHealth = 0;
@@ -87,17 +88,21 @@
         </script>-->
     </head>
     <body onload="Javascript:draw();">
-        <h1 id="Prompt">Pick how much health you want to start off with (PSSST... HIGHER IS BETTER! PICK 4!)</h1>
-        <canvas id="canvas" width="150" height="150"></canvas>
-        <form onsubmit="Javascript:addDoret();">
-            <select id="menuItems">
-                <option id="option1" value="1">1</option>
-                <option id="option2" value="2">2</option>
-                <option id="option3" value="3">3</option>
-                <option id="option4" value="4">4</option>
-            </select>
-            <button type="button" onclick="Javascript:addDoret();" class="1" title="3">Carbohydrates</button>
-        </form>
+        <div class="center">
+            <h1 class="text" id="Prompt">Pick how much health you want to start off with (PSSST... HIGHER IS BETTER! PICK 4!)</h1>
+            <div class="center2">
+                <canvas id="canvas" width="300" height="300"></canvas>
+                <form onsubmit="Javascript:addDoret();">
+                <select id="menuItems">
+                    <option id="option1" value="1">1</option>
+                    <option id="option2" value="2">2</option>
+                    <option id="option3" value="3">3</option>
+                    <option id="option4" value="4">4</option>
+                </select>
+                <button type="button" onclick="Javascript:addDoret();" class="1" title="3">Carbohydrates</button>
+            </form>
+            </div>
+        </div>
     </body>
 </html>
 
